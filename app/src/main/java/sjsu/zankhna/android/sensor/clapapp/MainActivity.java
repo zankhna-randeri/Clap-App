@@ -9,6 +9,7 @@ import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -58,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Displays Toast message on screen.
+     *
      * @param message The message to show.
      */
     private void showMessage(String message) {
@@ -72,11 +74,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSensorChanged(SensorEvent event) {
                 if (event.sensor.getType() == Sensor.TYPE_PROXIMITY) {
-                    if (event.values[0] == 0) {
-//                        showMessage("Near");
-                    } else {
-//                        showMessage("Away");
-                    }
+                    float volume = 1 - (event.values[0] / 10f);
+                    Log.d("Volume := ", String.valueOf(volume));
+                    player.setVolume(volume, volume);
                 }
             }
 
