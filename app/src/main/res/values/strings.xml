@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Clap App</string>
     <string name="msg_no_sensor">No Proximity Sensor available</string>
+    <string name="msg_app_intro">This application uses Proximity Sensor to simulate Clapping.
+    Decrease in Proximity value will decrease background music sound.
+    Similarly, increase in Proximity will increase background music sound.</string>
 </resources>
