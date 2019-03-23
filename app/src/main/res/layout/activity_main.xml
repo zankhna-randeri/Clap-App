@@ -16,6 +16,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_margin="@dimen/margin_medium"
+        android:text="@string/msg_app_intro"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/font_small" />
 
 </LinearLayout>
